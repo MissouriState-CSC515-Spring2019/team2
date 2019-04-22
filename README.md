@@ -1,2 +1,6 @@
-# Random-Animals
-Page that interacts with three separate apis to produce random pictures of animals
+# Final Project - CSC515- team2  #
+
+## Objective ##
+* Create a single page application using the React framework.
+
+## Specifications ##
