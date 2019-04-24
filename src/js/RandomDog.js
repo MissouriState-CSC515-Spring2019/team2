@@ -42,7 +42,7 @@ class RandomDog extends React.Component {
           return (
             <div>
               <video controls>
-                <source src={image} type="video/mp4"/>
+                <source className="img-fluid" src={image} type="video/mp4"/>
               </video>
             </div>
           )
@@ -51,7 +51,7 @@ class RandomDog extends React.Component {
           return (
             <div>
               <video controls>
-                <source src={image} type="video/webm"/>
+                <source className="img-fluid" src={image} type="video/webm"/>
               </video>
             </div>
           )
@@ -59,7 +59,7 @@ class RandomDog extends React.Component {
         else {
           return (
             <div>
-                <img src={image}/>
+                <img className="img-fluid" src={image}/>
             </div>
           );
         }

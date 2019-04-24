@@ -41,7 +41,7 @@ class RandomCat extends React.Component {
         } else {
           return (
             <div>
-                <img src={image}/>
+                <img className="img-fluid" src={image}/>
             </div>
           );
         }
