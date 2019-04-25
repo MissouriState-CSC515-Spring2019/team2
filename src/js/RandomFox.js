@@ -11,10 +11,11 @@ class RandomFox extends React.Component {
       }
     
       componentDidMount() {
-        fetch("https://randomfox.ca/floof/", {headers: {"Access-Control-Allow-Origin": "*"}})
+        fetch("https://cors-anywhere.herokuapp.com/https://randomfox.ca/floof/")
           .then(res => res.json())
           .then(
             (result) => {
+              console.log(result)
               this.setState({
                 isLoaded: true,
                 image: result.image
