@@ -31,25 +31,6 @@ const routing = (
             <Route path="/randomCat" component={RandomCat}/>
             <Route path="/randomDog" component={RandomDog}/>
 		</div>
-        {/* <div>
-            <ul>
-                <li>
-                    <Link to="/">Home</Link>
-                </li>
-                <li>
-                    <Link to="/randomFox">Fox</Link>
-                </li>
-                <li>
-                    <Link to="/randomCat">Cat</Link>
-                </li>
-                <li>
-                    <Link to="/randomDog">Dog</Link>
-                </li>
-            </ul>
-            <Route path="/randomFox" component={RandomFox}/>
-            <Route path="/randomCat" component={RandomCat}/>
-            <Route path="/randomDog" component={RandomDog}/>
-        </div> */}
     </BrowserRouter>
 )
 
