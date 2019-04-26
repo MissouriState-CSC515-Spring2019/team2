@@ -23,12 +23,20 @@ module.exports = (env, args) => {
         },
         entry: './src/js/index.js',
         output: {
-            path: path.resolve(__dirname, 'dist'),
-            filename: 'main.js'
+            path: path.resolve(__dirname, '/dist'),
+            filename: '/main.js'
         },
 
         devServer: {
-          historyApiFallback: true // this prevents the default browser full page refresh on form submission and link change
+          historyApiFallback: true, // this prevents the default browser full page refresh on form submission and link change
+          before(app){
+            app.use((req,res,next) => {
+              if(/\/.*.jpg/.test(req.url) ||/\/.*.png/.test(req.url) || /\/.*.mp4/.test(req.url) ||req.url === '/'){
+                req.url = '/';
+              } 
+              next();
+            });
+          }
         },
         plugins: [
             new HtmlWebpackPlugin(

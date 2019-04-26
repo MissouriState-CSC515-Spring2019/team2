@@ -15,10 +15,7 @@ class RandomCat extends React.Component {
           .then(res => res.json())
           .then(
             (result) => {
-              this.setState({
-                isLoaded: true,
-                image: result.file
-              });
+              this.props.history.push('randomCat/' + (result.file).split('/')[(result.file).split('/').length-1]);
             },
             // Note: it's important to handle errors here
             // instead of a catch() block so that we don't swallow

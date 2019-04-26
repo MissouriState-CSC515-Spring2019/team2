@@ -15,11 +15,7 @@ class RandomFox extends React.Component {
           .then(res => res.json())
           .then(
             (result) => {
-              console.log(result)
-              this.setState({
-                isLoaded: true,
-                image: result.image
-              });
+              this.props.history.push('randomFox/' + (result.image).split('/')[(result.image).split('/').length-1]);
             },
             // Note: it's important to handle errors here
             // instead of a catch() block so that we don't swallow
