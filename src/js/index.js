@@ -16,6 +16,13 @@ const routing = (
 					Cute Animal Finder 5000
 				</h1>
 			</div>
+			<div className="container text-center">
+				<div className="row mb-2">
+					<h3 className="col">
+						<Link to="/">Home</Link>
+					</h3>
+				</div>
+			</div>
 			<div className="row">
 				<h3 className="col">
 					<Link to="/randomFox">Fox</Link>
@@ -28,8 +35,8 @@ const routing = (
 				</h3>
 			</div>
 			<Route path="/randomFox" component={RandomFox}/>
-            <Route path="/randomCat" component={RandomCat}/>
-            <Route path="/randomDog" component={RandomDog}/>
+      <Route path="/randomCat" component={RandomCat}/>
+      <Route path="/randomDog" component={RandomDog}/>
 		</div>
     </BrowserRouter>
 )
