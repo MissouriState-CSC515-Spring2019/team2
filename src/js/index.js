@@ -12,9 +12,11 @@ const routing = (
     <BrowserRouter>
 		<div className="container text-center">
 			<div className="row mb-2">
-				<h1 className="col">
+				<div className="col">
+					<h1 className="display-4">
 					Cute Animal Finder 5000
-				</h1>
+					</h1>
+				</div>
 			</div>
 			<div className="container text-center">
 				<div className="row mb-2">
