@@ -26,7 +26,7 @@ class Home extends React.Component {
 
     render() {
         return (
-        <div className="container text-center">
+        <div>
 			<div className="row mb-2">
 				<div className="col">
 					<h1 className="display-4">
