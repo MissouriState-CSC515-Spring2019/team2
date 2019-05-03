@@ -12,13 +12,13 @@ class Home extends React.Component {
         .then(
             (result) => {
                 if(api === "https://aws.random.cat/meow") {
-                    this.props.history.push("/randomCat/" + (result.file.split('/')[result.file.split('/').length-1]))
+                    this.props.history.push("/randomCat#" + (result.file.split('/')[result.file.split('/').length-1]))
                 }
                 else if(api === "https://random.dog/woof.json") {
-                    this.props.history.push("/randomDog/" + (result.url.split('/')[result.url.split('/').length-1]))
+                    this.props.history.push("/randomDog#" + (result.url.split('/')[result.url.split('/').length-1]))
                 }
                 else if(api === "https://cors-anywhere.herokuapp.com/https://randomfox.ca/floof/") {
-                    this.props.history.push("/randomFox/" + (result.image.split('/')[result.image.split('/').length-1]))
+                    this.props.history.push("/randomFox#" + (result.image.split('/')[result.image.split('/').length-1]))
                 }
             }
         )
