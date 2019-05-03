@@ -4,6 +4,7 @@
   "description": "Single Page Application made using React",
   "main": "index.js",
   "scripts": {
+    "test": "mocha src/test/*.js",
     "start": "webpack-dev-server --mode development"
   },
   "repository": {
