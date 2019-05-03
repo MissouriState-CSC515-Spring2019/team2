@@ -124,3 +124,6 @@ Temporary Items
 .vs/
 
 # End of https://www.gitignore.io/api/visualstudiocode
+node_modules/
+dist/
+/package-lock.json

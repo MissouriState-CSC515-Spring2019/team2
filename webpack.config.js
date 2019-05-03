@@ -28,7 +28,15 @@ module.exports = (env, args) => {
         },
 
         devServer: {
-          historyApiFallback: true // this prevents the default browser full page refresh on form submission and link change
+          historyApiFallback: true, // this prevents the default browser full page refresh on form submission and link change
+          before(app){
+            app.use((req,res,next) => {
+			  if(req.url === '/'){
+				req.url = '/';
+			  }
+              next();
+            });
+          }
         },
         plugins: [
             new HtmlWebpackPlugin(

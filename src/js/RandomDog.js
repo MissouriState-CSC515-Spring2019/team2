@@ -11,14 +11,16 @@ class RandomDog extends React.Component {
       }
     
       componentDidMount() {
+		if(window.location.hash.substr(1).length === 0){
         fetch("https://random.dog/woof.json")
           .then(res => res.json())
           .then(
             (result) => {
-              this.setState({
-                isLoaded: true,
-                image: result.url
-              });
+              this.props.history.push('randomDog#' + (result.url).split('/')[(result.url).split('/').length-1]);
+			  this.setState({
+				  isLoaded: true,
+				  image: result.url
+			  });
             },
             // Note: it's important to handle errors here
             // instead of a catch() block so that we don't swallow
@@ -30,6 +32,13 @@ class RandomDog extends React.Component {
               });
             }
           )
+		}
+		else{
+			this.setState({
+				isLoaded: true,
+				image:'https://random.dog/' + window.location.hash.substr(1)
+			});
+		}
       }
     
       render() {
@@ -47,7 +56,7 @@ class RandomDog extends React.Component {
             </div>
           )
 
-        } else if (isLoaded && image.substring(image.lastIndexOf('.') + 1) === 'webm') {
+        } else if (isLoaded && window.location.hash.substr(1).substring(image.lastIndexOf('.') + 1) === 'webm') {
           return (
             <div>
               <video controls>
