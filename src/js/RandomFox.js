@@ -11,11 +11,16 @@ class RandomFox extends React.Component {
       }
     
       componentDidMount() {
+		if(window.location.hash.substr(1).length === 0){
         fetch("https://cors-anywhere.herokuapp.com/https://randomfox.ca/floof/")
           .then(res => res.json())
           .then(
             (result) => {
-              this.props.history.push('randomFox/' + (result.image).split('/')[(result.image).split('/').length-1]);
+              this.props.history.push('randomFox#' + (result.image).split('/')[(result.image).split('/').length-1]);
+			  this.setState({
+				  isLoaded: true,
+				  image: result.image
+			  });
             },
             // Note: it's important to handle errors here
             // instead of a catch() block so that we don't swallow
@@ -26,7 +31,14 @@ class RandomFox extends React.Component {
                 error
               });
             }
-          )
+		  )
+		}
+		else{
+			this.setState({
+				isLoaded: true,
+				image:'https://randomfox.ca/images/' + window.location.hash.substr(1)
+			});
+		}
       }
     
       render() {

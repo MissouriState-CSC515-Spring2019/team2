@@ -36,7 +36,3 @@ const routing = (
 
 const domContainer = document.querySelector('#like_button_container');
 ReactDOM.render(routing, domContainer);
-
-if(/\/\w*.jpg/.test(location.pathname) || /\/\w*.png/.test(location.pathname) || /\/\w*.mp4/.test(location.pathname)){
-    console.log("*")
-}
