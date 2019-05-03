@@ -11,6 +11,8 @@ class RandomDog extends React.Component {
       }
     
       componentDidMount() {
+        this.setState({height: window.innerHeight * (0.7) + 'px'});
+        this.setState({width: window.innerWidth * (0.7) + 'px'});
         fetch("https://random.dog/woof.json")
           .then(res => res.json())
           .then(
@@ -59,7 +61,7 @@ class RandomDog extends React.Component {
         else {
           return (
             <div>
-                <img className="img-fluid" src={image}/>
+                <img className="img-fluid" src={image} transformation width={this.state.width} height={this.state.height} gravity="faces" crop="fill"/>
             </div>
           );
         }
