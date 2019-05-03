@@ -35,6 +35,9 @@ class Home extends React.Component {
 				</div>
 			</div>
 			<div className="row">
+                <h3 className="col">
+                    <button onClick={() => {this.props.history.push('/')}}>Home</button>
+                </h3>
 				<h3 className="col">
                     <button onClick={() => {this.fetchData("https://aws.random.cat/meow")}}>Cat</button>
 				</h3>
