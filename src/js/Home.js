@@ -4,8 +4,6 @@ import Twitter from 'react-sharingbuttons/dist/buttons/Twitter';
 import Pinterest from 'react-sharingbuttons/dist/buttons/Pinterest';
 import '../css/social-sharing.css';
 
-let url= '';
-
 class Home extends React.Component {
     constructor(props) {
         super(props);
