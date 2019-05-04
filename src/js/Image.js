@@ -12,7 +12,7 @@ class Image  extends React.Component {
             if (window.location.hash.substr(1).split('.').pop() === 'mp4') {
                 return (
                 <div>
-                    <video controls>
+                    <video controls autoPlay muted>
                     <source className="img-fluid" src={"https://random.dog/" + window.location.hash.substr(1)} type="video/mp4"/>
                     </video>
                 </div>
@@ -21,7 +21,7 @@ class Image  extends React.Component {
             } else if (window.location.hash.substr(1).split('.').pop() === 'webm') {
                 return (
                 <div>
-                    <video controls>
+                    <video controls autoPlay muted>
                     <source className="img-fluid" src={"https://random.dog/" + window.location.hash.substr(1)} type="video/webm"/>
                     </video>
                 </div>
