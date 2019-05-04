@@ -26,14 +26,7 @@ class Menu extends React.Component {
 
     render() {
         return (
-        <div>
-			<div className="row mb-2">
-				<div className="col">
-					<h1 className="display-4">
-					Cute Animal Finder 5000
-					</h1>
-				</div>
-			</div>
+        
 			<div className="row">
                 <h3 className="col">
                     <button onClick={() => {this.props.history.push('/')}}>Home</button>
@@ -48,7 +41,6 @@ class Menu extends React.Component {
                     <button onClick={() => {this.fetchData("https://cors-anywhere.herokuapp.com/https://randomfox.ca/floof/")}}>Fox</button>
 				</h3>
 			</div>
-        </div>
         );
     }
 }

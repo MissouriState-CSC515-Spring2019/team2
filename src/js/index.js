@@ -11,7 +11,6 @@ import {Route, BrowserRouter} from 'react-router-dom';
 const routing = (
     <BrowserRouter>
 		<div className="container text-center">
-			<Route path="/" component={Menu}/>
 			<Route exact path="/" component={Home}/>
 			<Route path="/randomCat" component={Image}/>
 			<Route path="/randomDog" component={Image}/>
