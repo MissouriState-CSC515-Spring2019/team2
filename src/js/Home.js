@@ -1,4 +1,10 @@
 import React from 'react';
+import Facebook from 'react-sharingbuttons/dist/buttons/Facebook';
+import Twitter from 'react-sharingbuttons/dist/buttons/Twitter';
+import Pinterest from 'react-sharingbuttons/dist/buttons/Pinterest';
+import '../css/social-sharing.css';
+
+let url= '';
 
 class Home extends React.Component {
     constructor(props) {
@@ -44,6 +50,13 @@ class Home extends React.Component {
 				<h3 className="col">
                     <button onClick={() => {this.fetchData("https://cors-anywhere.herokuapp.com/https://randomfox.ca/floof/")}}>Fox</button>
 				</h3>
+			</div>
+            <div className="row">
+				<h6 className="col">
+                    <Facebook url={url} />
+                    <Twitter url={url} />
+                    <Pinterest url={url} />
+				</h6>
 			</div>
         </div>
         );
