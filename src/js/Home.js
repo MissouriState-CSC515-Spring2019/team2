@@ -10,6 +10,7 @@ class Home extends React.Component {
     constructor(props) {
         super(props);
         this.fetchData = this.fetchData.bind(this);
+        this.state = {current_URL: ''}; //this holds the current link for facebook sharing (NOT the localhost url)
       }
 
     fetchData(api) {
@@ -18,7 +19,10 @@ class Home extends React.Component {
         .then(
             (result) => {
                 if(api === "https://aws.random.cat/meow") {
-                    this.props.history.push("/randomCat#" + (result.file.split('/')[result.file.split('/').length-1]))
+                    this.props.history.push("/randomCat#" + (result.file.split('/')[result.file.split('/').length-1]));
+                    this.setState({
+                        current_URL: 'https://purr.objects-us-east-1.dream.io/i/' + window.location.hash.substr(1)
+                    });
                 }
                 else if(api === "https://random.dog/woof.json") {
                     this.props.history.push("/randomDog#" + (result.url.split('/')[result.url.split('/').length-1]))
@@ -53,9 +57,9 @@ class Home extends React.Component {
 			</div>
             <div className="row">
 				<h6 className="col">
-                    <Facebook url={url} />
-                    <Twitter url={url} />
-                    <Pinterest url={url} />
+                    <Facebook url={this.state.current_URL} />
+                    <Twitter url={this.state.current_URL} />
+                    <Pinterest url={this.state.current_URL} />
 				</h6>
 			</div>
         </div>
