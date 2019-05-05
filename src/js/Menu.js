@@ -4,6 +4,7 @@ class Menu extends React.Component {
     constructor(props) {
         super(props);
         this.fetchData = this.fetchData.bind(this);
+        this.returnHome = this.returnHome.bind(this);
         if(window.location.pathname.split('/')[window.location.pathname.split('/').length-1] === "randomCat") {
             this.state = {
                 header: "Random Cat"
@@ -52,7 +53,10 @@ class Menu extends React.Component {
             }
         )
     }
-
+    returnHome() {
+        this.setState({header: "Welcome"})
+        this.props.history.push("/")
+    }
     render() {
         return (
             <div>
@@ -65,7 +69,7 @@ class Menu extends React.Component {
                 </div>
                 <div className="row">
                     <h3 className="col">
-                        <button  onClick={() => {this.setState({header: "Welcome"})}}>Home</button>
+                        <button  onClick={() => {this.returnHome()}}>Home</button>
                     </h3>
                     <h3 className="col">
                         <button onClick={() => {this.fetchData("https://aws.random.cat/meow")}}>Cat</button>
