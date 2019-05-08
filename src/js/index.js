@@ -2,43 +2,18 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import RandomFox from './RandomFox';
-import RandomCat from './RandomCat';
-import RandomDog from './RandomDog';
+import Image from './Image';
+import Home from './Home';
 
-import {Route, Link, BrowserRouter} from 'react-router-dom';
+import {Route, BrowserRouter} from 'react-router-dom';
 
 const routing = (
     <BrowserRouter>
 		<div className="container text-center">
-			<div className="row mb-2">
-				<div className="col">
-					<h1 className="display-4">
-					Cute Animal Finder 5000
-					</h1>
-				</div>
-			</div>
-			<div className="container text-center">
-				<div className="row mb-2">
-					<h3 className="col">
-						<Link to="/">Home</Link>
-					</h3>
-				</div>
-			</div>
-			<div className="row">
-				<h3 className="col">
-					<Link to="/randomFox">Fox</Link>
-				</h3>
-				<h3 className="col">
-					<Link to="/randomCat">Cat</Link>
-				</h3>
-				<h3 className="col">
-					<Link to="/randomDog">Dog</Link>
-				</h3>
-			</div>
-			<Route path="/randomFox" component={RandomFox}/>
-      <Route path="/randomCat" component={RandomCat}/>
-      <Route path="/randomDog" component={RandomDog}/>
+			<Route exact path="/" component={Home}/>
+			<Route path="/randomCat" component={Image}/>
+			<Route path="/randomDog" component={Image}/>
+			<Route path="/randomFox" component={Image}/>
 		</div>
     </BrowserRouter>
 )
