@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development",
-    "test": "mocha --require @babel/register --require ./src/test/test.js --require ./test/helpers.js --require ignore-styles 'src/**/*.spec.js'"
+    "test": "mocha src/test/test.js"
   },
   "repository": {
     "type": "git",

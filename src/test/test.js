@@ -1,10 +1,9 @@
 //Tests using Unit.js with Mocha
 //Run with ./node_modules/mocha/bin/mocha test.js if mocha is installed locally
 //Run with mocha test.js if installed globally
-import React from 'react';
-import test from 'unit.js';
+var test = require('unit.js')
 
-describe('Learning by the example', function(){
+describe('Tests 1-3', function(){
     it('test1', function(){
 
     })
@@ -16,13 +15,13 @@ describe('Learning by the example', function(){
     })
 
     it('test3', function(){
-        // just for example of tested value
+        //different ways of testing
         var example = 'hello';
-        // assert that example variable is a string
+
         test.string(example);
-        // or with Must.js
+
         test.must(example).be.a.string();
-        // or with assert
+
         test.assert(typeof example === 'string');
     })
 })
