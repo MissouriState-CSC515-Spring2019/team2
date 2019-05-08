@@ -2,10 +2,12 @@
 //Run with ./node_modules/mocha/bin/mocha test.js if mocha is installed locally
 //Run with mocha test.js if installed globally
 var test = require('unit.js')
+import RandomCat from '../src/js/RandomCat';
 
+//ES6 imports working with mocha
 describe('Tests 1-3', function(){
     it('test1', function(){
-
+        test.assert(typeof RandomCat !== 'object')
     })
 
     it('test2', function(){
