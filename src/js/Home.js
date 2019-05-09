@@ -11,7 +11,10 @@ class Home extends React.Component {
 					<h1 className="display-4">
 					Welcome
 					</h1>
+					<hr></hr>
                     <Menu history={this.props.history}/>
+					<hr></hr>
+					Hi! Please select an animal to begin!
 				</div>
 			</div>
         </div>

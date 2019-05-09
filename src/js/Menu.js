@@ -54,7 +54,11 @@ class Menu extends React.Component {
                     <h3 className="col">
                         <button onClick={() => {this.fetchData("https://cors-anywhere.herokuapp.com/https://randomfox.ca/floof/")}}>Fox</button>
                     </h3>
-                    </div>
+                    <h6 className="row">
+                        <button onClick={() => {this.props.history.push('/settings')}}>Settings</button>
+                    </h6>
+                </div>
+                
             );
         }
         

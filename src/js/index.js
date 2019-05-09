@@ -4,6 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Image from './Image';
 import Home from './Home';
+import Settings from './Settings'
 
 import {Route, BrowserRouter} from 'react-router-dom';
 
@@ -14,6 +15,7 @@ const routing = (
 			<Route path="/randomCat" component={Image}/>
 			<Route path="/randomDog" component={Image}/>
 			<Route path="/randomFox" component={Image}/>
+			<Route path="/settings" component={Settings}/>
 		</div>
     </BrowserRouter>
 )
