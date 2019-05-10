@@ -75,9 +75,7 @@ class Image extends React.Component {
                     <div className="row justify-content-md-center">
                         <h3>
                             <label className='container' htmlFor='autoReload'> Auto-Load new images
-                                <input type='checkbox' id='autoReload' onClick={() => {
-                                    this.setState({ autoReloadCheckbox: document.getElementById("autoReload").checked });
-                                }} /> 
+                                <input type='checkbox' id='autoReload' /> 
                                 <span className='checkmark'> </span>
                             </label>
                         </h3>
@@ -164,9 +162,7 @@ class Image extends React.Component {
                         <div className="row justify-content-md-center">
                             <h3>
                                 <label className='container' htmlFor='autoReload'> Auto-Load new images
-                                    <input type='checkbox' id='autoReload' onClick={() => {
-                                        this.setState({ autoReloadCheckbox: document.getElementById("autoReload").checked });
-                                    }} /> 
+                                    <input type='checkbox' id='autoReload' /> 
                                     <span className='checkmark'> </span>
                                 </label>
                             </h3>
