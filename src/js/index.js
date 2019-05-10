@@ -16,7 +16,6 @@ const routing = (
 			<Route path="/randomCat" component={Image}/>
 			<Route path="/randomDog" component={Image}/>
 			<Route path="/randomFox" component={Image}/>
-			<Route path="/settings" component={Settings}/>
 			<Route path="/MadeBy" component={MadeBy}/>
 		</div>
     </BrowserRouter>
