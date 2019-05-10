@@ -29,6 +29,7 @@ class Image  extends React.Component {
                             <Pinterest url={"https://purr.objects-us-east-1.dream.io/i/" + window.location.hash.substr(1)} />
                          </h6>
                     </div>
+                    <button className="btn btn-secondary mx-auto" onClick={() => {this.props.history.push("/MadeBy")}}>Made By </button>
                 </div>
                 
             )
@@ -50,6 +51,7 @@ class Image  extends React.Component {
                             <Pinterest url={"https://random.dog/" + window.location.hash.substr(1)} />
                          </h6>
                     </div>
+                    <button className="btn btn-secondary mx-auto" onClick={() => {this.props.history.push("/MadeBy")}}>Made By </button>
                 </div>
                 )
     
@@ -70,6 +72,7 @@ class Image  extends React.Component {
                             <Pinterest url={"https://random.dog/" + window.location.hash.substr(1)} />
                          </h6>
                     </div>
+                    <button className="btn btn-secondary mx-auto" onClick={() => {this.props.history.push("/MadeBy")}}>Made By </button>
                 </div>
                 )
                 }    
@@ -90,6 +93,7 @@ class Image  extends React.Component {
                                     <Pinterest url={"https://random.dog/" + window.location.hash.substr(1)} />
                                 </h6>
                             </div>
+                            <button className="btn btn-secondary mx-auto" onClick={() => {this.props.history.push("/MadeBy")}}>Made By </button>
                         </div>
                     )
         else if(window.location.pathname.split('/')[window.location.pathname.split('/').length-1] === "randomFox")
@@ -109,10 +113,12 @@ class Image  extends React.Component {
                             <Pinterest url={"http://randomfox.ca/images/" + window.location.hash.substr(1)} />
                          </h6>
                     </div>
+                    <button className="btn btn-secondary mx-auto" onClick={() => {this.props.history.push("/MadeBy")}}>Made By </button>
                 </div>
                 
             )
     }
+    
         
 }
 
