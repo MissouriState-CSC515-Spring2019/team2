@@ -10,8 +10,26 @@
 		h1 {
 		  text-shadow: 2px 2px;
 		}
+		#loadingBackground{
+			opacity: .5;
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			background-color: black;
+			pointer-events: none;
+			transition: opacity .25s ease-in-out;
+			-moz-transition: opacity .25s ease-in-out;
+			-webkit-transition: opacity .25s ease-in-out;
+		}
 	</style>
 	<body>
 		<div id="like_button_container"></div>
+		<div id="loading">
+			<div id="loadingBackground"></div>
+			<img style="position:absolute; top:30%; left:40%" src="src/img/Loading.svg"/>
+		</div>
+		
 	</body>
 </html>

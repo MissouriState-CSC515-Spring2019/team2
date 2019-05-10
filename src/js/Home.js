@@ -4,6 +4,7 @@ import Menu from './Menu';
 class Home extends React.Component {
 
     render() {
+        document.getElementById("loading").style.opacity = 0;
         return (
         <div>
 			<div className="row mb-2">
