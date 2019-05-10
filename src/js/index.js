@@ -4,7 +4,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Image from './Image';
 import Home from './Home';
-import Settings from './Settings'
 import MadeBy from './MadeBy';
 
 import {Route, BrowserRouter} from 'react-router-dom';
