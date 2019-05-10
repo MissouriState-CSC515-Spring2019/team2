@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; 
 
 class Menu extends React.Component {
     constructor(props) {
@@ -42,20 +42,24 @@ class Menu extends React.Component {
         } 
         else {
             return (
-                <div className="row">
-                    <h3 className="col-3">
-                        <button className="btn btn-secondary w-100 " onClick={() => {this.props.history.push('/')}}>Home</button>
-                    </h3>
-                    <h3 className="col-3">
-                        <button className="btn btn-secondary w-100 " onClick={() => {this.fetchData("https://aws.random.cat/meow")}}>Cat</button>
-                    </h3>
-                    <h3 className="col-3">
-                        <button className="btn btn-secondary w-100 " onClick={() => {this.fetchData("https://random.dog/woof.json")}}>Dog</button>
-                    </h3>
-                    <h3 className="col-3">
-                        <button className="btn btn-secondary w-100 " onClick={() => {this.fetchData("https://cors-anywhere.herokuapp.com/https://randomfox.ca/floof/")}}>Fox</button>
-                    </h3>
+                <div>
+                    <div className="row">
+                        <h3 className="col-3">
+                            <button className="btn btn-secondary w-100 " onClick={() => {this.props.history.push('/')}}>Home</button>
+                        </h3>
+                        <h3 className="col-3">
+                            <button className="btn btn-secondary w-100 " id="catButton" onClick={() => {this.fetchData("https://aws.random.cat/meow")}}>Cat</button>
+                        </h3>
+                        <h3 className="col-3">
+                            <button className="btn btn-secondary w-100 " id="dogButton" onClick={() => {this.fetchData("https://random.dog/woof.json")}}>Dog</button>
+                        </h3>
+                        <h3 className="col-3">
+                            <button className="btn btn-secondary w-100 " id="foxButton" onClick={() => {this.fetchData("https://cors-anywhere.herokuapp.com/https://randomfox.ca/floof/")}}>Fox</button>
+                        </h3>
                     </div>
+                </div>
+                
+                
             );
         }
         

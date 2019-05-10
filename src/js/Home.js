@@ -12,7 +12,9 @@ class Home extends React.Component {
 					<h1 className="display-4">
 					Welcome to the Cute Animal Finder
 					</h1>
+					<hr></hr>
                     <Menu history={this.props.history}/>
+					<hr></hr>
                     <img className="img-fluid" src={"https://poolhouse.s3.amazonaws.com/blog-assets/dog-cat-and-fox.jpg"}/>
 				</div>
 			</div>
