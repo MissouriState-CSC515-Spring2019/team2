@@ -9,7 +9,8 @@ class Menu extends React.Component {
         }
       }
 
-    fetchData(api) {
+    fetchData(api) {        
+        document.getElementById("loading").style.opacity = 1;
         fetch(api)
         .then(res => res.json())
         .then(

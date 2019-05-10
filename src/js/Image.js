@@ -11,6 +11,7 @@ class Image  extends React.Component {
         this.state = {URL_for_social_media: window.location.hash.substr(1), autoReloadCheckbox: false}; //this holds the current link for social-media sharing (NOT the localhost url)
       }
     render() {
+        document.getElementById("loading").style.opacity = 0;
         if(window.location.pathname.split('/')[window.location.pathname.split('/').length-1] === "randomCat")
             return (
                 <div>
