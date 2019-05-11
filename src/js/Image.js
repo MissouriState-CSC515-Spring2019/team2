@@ -4,6 +4,7 @@ import Facebook from 'react-sharingbuttons/dist/buttons/Facebook';
 import Twitter from 'react-sharingbuttons/dist/buttons/Twitter';
 import Pinterest from 'react-sharingbuttons/dist/buttons/Pinterest';
 import '../css/social-sharing.css';
+import '../css/checkbox.css';
 
 var reload;
 
