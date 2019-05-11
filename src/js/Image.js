@@ -176,6 +176,7 @@ class Image extends React.Component {
                             <Pinterest url={"http://randomfox.ca/images/" + window.location.hash.substr(1)} />
                          </h6>
                     </div>
+                    <button className="btn btn-secondary mx-auto" onClick={() => {this.props.history.push("/MadeBy")}}>Made By </button>
                 </div>
                 
             )
